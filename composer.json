@@ -1,7 +1,7 @@
 {
     "name": "xdevor/composer-parser",
     "type": "library",
-    "description": "A parser that can parse the composer.json file of installed PHP packages.",
+    "description": "A parser that can parse the composer.json file of all installed PHP packages.",
     "keywords": [
         "parser",
         "composer",
