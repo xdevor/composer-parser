@@ -1,0 +1,46 @@
+{
+    "name": "xdevor/composer-parser",
+    "description": "A parser that can parse the composer.json file of installed PHP packages.",
+    "keywords": [
+        "parser",
+        "composer",
+        "packages",
+        "installed.json"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "xdevor",
+            "email": "0.yu.zhuang@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/xdevor/composer-parser",
+    "require": {
+        "php": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xdevor\\ComposerParser\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xdevor\\ComposerParser\\Tests\\": "tests/"
+        },
+        "files": [
+            "./src/helpers.php"
+        ]
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.22"
+    }
+}
