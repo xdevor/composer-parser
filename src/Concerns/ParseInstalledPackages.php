@@ -40,7 +40,7 @@ trait ParseInstalledPackages
         $packages = [];
         $installedJsonPath = $this->installedJsonPath ?? file_exists(__DIR__ . '/../../vendor/composer/installed.json')
         ? __DIR__ . '/../../vendor/composer/installed.json'
-        : __DIR__ . '/../../../vendor/composer/installed.json';
+        : __DIR__ . '/../../../../composer/installed.json';
 
         if (file_exists($installedJsonPath)) {
             $installed = json_decode(file_get_contents($installedJsonPath), true);
