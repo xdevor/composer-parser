@@ -17,9 +17,9 @@ trait ParseArray
      * @param  mixed  $default
      * @return mixed
      */
-    public static function get($array, $key, $default = null)
+    private static function parseArray($array, $key, $default = null)
     {
-        if (! static::accessible($array)) {
+        if (! static::isValueAccessible($array)) {
             return value($default);
         }
 
@@ -27,7 +27,7 @@ trait ParseArray
             return $array;
         }
 
-        if (static::exists($array, $key)) {
+        if (static::isKeyExists($array, $key)) {
             return $array[$key];
         }
 
@@ -36,7 +36,7 @@ trait ParseArray
         }
 
         foreach (explode('.', $key) as $segment) {
-            if (static::accessible($array) && static::exists($array, $segment)) {
+            if (static::isValueAccessible($array) && static::isKeyExists($array, $segment)) {
                 $array = $array[$segment];
             } else {
                 return value($default);
@@ -52,7 +52,7 @@ trait ParseArray
      * @param  mixed  $value
      * @return bool
      */
-    public static function accessible($value)
+    private static function isValueAccessible($value)
     {
         return is_array($value) || $value instanceof ArrayAccess;
     }
@@ -64,7 +64,7 @@ trait ParseArray
      * @param  string|int  $key
      * @return bool
      */
-    public static function exists($array, $key)
+    private static function isKeyExists($array, $key)
     {
         if ($array instanceof ArrayAccess) {
             return $array->offsetExists($key);

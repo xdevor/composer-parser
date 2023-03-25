@@ -18,7 +18,7 @@ trait ParseInstalledPackages
 
     protected function parsePackageComposer(string $packageName, string $key, $default = null)
     {
-        return self::get($this->packageComposer($packageName), $key, $default);
+        return self::parseArray($this->packageComposer($packageName), $key, $default);
     }
 
     protected function packageComposer(string $templatePackageName): array
