@@ -15,6 +15,6 @@ class Parser
 
     public function parse(string $packageName, string $key, $default = null)
     {
-        return $this->parsePackageComposer($packageName, $key, $default);
+        return $this->parsePackageComposer($packageName, $key,  $default);
     }
 }
