@@ -27,10 +27,7 @@
     "autoload-dev": {
         "psr-4": {
             "Xdevor\\ComposerParser\\Tests\\": "tests/"
-        },
-        "files": [
-            "./src/helpers.php"
-        ]
+        }
     },
     "scripts": {
         "test": "./vendor/bin/pest"
