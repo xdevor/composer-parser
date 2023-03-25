@@ -1,6 +1,6 @@
 # ComposerParser
 
-A parser that can parse the composer.json file of installed PHP packages.
+A parser that can parse the composer.json file of all installed PHP packages.
 
 <p align="left">
     <a href="https://github.com/xdevor/composer-parser/actions"><img src="https://github.com/xdevor/composer-parser/actions/workflows/tests.yml/badge.svg" alt="Test Status"></a>
@@ -17,14 +17,16 @@ composer require xdevor/composer-parser
 
 ## Usage
 
-1. parse composer.json file of installed PHP packages
+1. parse composer.json file of all installed PHP packages
 ```php
 ...
 use Xdevor\ComposerParser\Parser;
 ...
 (new Parser())->parse('the/package', 'name'); // return name of the package
-(new Parser())->parse('the/package', 'not_exist_key'); // return null
 (new Parser())->parse('the/package', 'authors.0.name'); // return the first author name
+(new Parser())->parse('the/package', 'not_exist_key'); // return null if key not exist
+(new Parser())->parse('the/package', 'not_exist_key', 'default'); // return 'default' if key not exist
+(new Parser(__DIR__ . '/customize/path/installed.json'))->parse('the/package', 'name'); // parse customize path
 ```
 
 ## Contributing
