@@ -12,6 +12,9 @@ composer require xdevor/composer-parser
 
 1. parse composer.json file of installed PHP packages
 ```php
+...
+use Xdevor\ComposerParser\Parser;
+...
 (new Parser())->parse('the/package', 'name'); // return name of the package
 (new Parser())->parse('the/package', 'not_exist_key'); // return null
 (new Parser())->parse('the/package', 'authors.0.name'); // return the first author name
