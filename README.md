@@ -1,6 +1,6 @@
 # ComposerParser
 
-A parser that can parse the composer.json file of all installed PHP packages.
+A parser that can parse all the installed PHP packages composer.json file.
 
 <p align="left">
     <a href="https://github.com/xdevor/composer-parser/actions"><img src="https://github.com/xdevor/composer-parser/actions/workflows/tests.yml/badge.svg" alt="Test Status"></a>
