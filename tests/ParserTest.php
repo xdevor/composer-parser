@@ -39,3 +39,8 @@ test('It can parse all by key', function () {
     $actual = (new Parser(__DIR__ . '/../tests/assets/fakeInstalled.json'))->parseAll('name');
     expect($actual)->toBe(['filp/whoops', 'phar-io/manifest', 'phar-io/version', 'phpstan/phpstan']);
 });
+
+test('It return empty array if key not exist on parse all method', function () {
+    $actual = (new Parser(__DIR__ . '/../tests/assets/fakeInstalled.json'))->parseAll('xxx.ooo.xxx');
+    expect($actual)->toBe([]);
+});
