@@ -1,6 +1,8 @@
 # ComposerParser
 
-A parser that can parse all the installed PHP packages composer.json file.
+ComposerParser is a PHP package that allows you to parse all the installed PHP packages composer.json file. If you have ever worked with PHP packages, you know how important composer.json is. It describes the package's dependencies, version constraints, and other metadata like providers of laravel app. However, parsing all of the composer.json files in a project can be a tedious and time-consuming task, especially if you are working with multiple packages.
+
+With ComposerParser, you can easily extract information from all of the composer.json files in your project.
 
 <p align="left">
     <a href="https://github.com/xdevor/composer-parser/actions"><img src="https://github.com/xdevor/composer-parser/actions/workflows/tests.yml/badge.svg" alt="Test Status"></a>
