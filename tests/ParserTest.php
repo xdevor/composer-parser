@@ -32,5 +32,10 @@ test('It can return correct value if array key exist', function () {
 test('It can use custom installed.json path', function () {
     $packageName = 'filp/whoops';
     $actual = (new Parser(__DIR__ . '/../tests/assets/fakeInstalled.json'))->parse($packageName, 'extra.branch-alias.dev-master');
-    expect($actual)->toBe('2.7-dev');
+    expect($actual)->toBe('2.7-test-dev');
+});
+
+test('It can parse all by key', function () {
+    $actual = (new Parser(__DIR__ . '/../tests/assets/fakeInstalled.json'))->parseAll('name');
+    expect($actual)->toBe(['filp/whoops', 'phar-io/manifest', 'phar-io/version', 'phpstan/phpstan']);
 });

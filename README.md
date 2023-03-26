@@ -17,16 +17,26 @@ composer require xdevor/composer-parser
 
 ## Usage
 
-1. parse composer.json file of all installed PHP packages
+1. parse specific installed package by key
 ```php
 ...
 use Xdevor\ComposerParser\Parser;
 ...
+// 1. parse specific installed package by key
 (new Parser())->parse('the/package', 'name'); // return name of the package
 (new Parser())->parse('the/package', 'authors.0.name'); // return the first author name
 (new Parser())->parse('the/package', 'not_exist_key'); // return null if key not exist
 (new Parser())->parse('the/package', 'not_exist_key', 'default'); // return 'default' if key not exist
 (new Parser(__DIR__ . '/customize/path/installed.json'))->parse('the/package', 'name'); // parse customize path
+```
+
+2. parse all installed package by key
+```php
+...
+use Xdevor\ComposerParser\Parser;
+...
+(new Parser())->parseAll($key = 'name'); // return name of all installed PHP packages
+(new Parser())->parseAll($key = 'extra.laravel.providers'); // return providers of all installed PHP packages
 ```
 
 ## Contributing
