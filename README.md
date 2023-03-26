@@ -5,7 +5,7 @@ A parser that can parse all the installed PHP packages composer.json file.
 <p align="left">
     <a href="https://github.com/xdevor/composer-parser/actions"><img src="https://github.com/xdevor/composer-parser/actions/workflows/tests.yml/badge.svg" alt="Test Status"></a>
     <a href="https://packagist.org/packages/xdevor/composer-parser"><img src="https://poser.pugx.org/xdevor/composer-parser/d/total.svg" alt="Total Downloads"></a>
-    <a href="https://packagist.org/packages/xdevor/composer-parser"><img src="https://img.shields.io/packagist/v/xdevor/composer-parser.svg?v=1.0.0" alt="packagist"></a>
+    <a href="https://packagist.org/packages/xdevor/composer-parser"><img src="https://img.shields.io/packagist/v/xdevor/composer-parser.svg?v=1.5.0" alt="packagist"></a>
     <a href="https://packagist.org/packages/xdevor/composer-parser"><img src="https://poser.pugx.org/xdevor/composer-parser/license.svg" alt="License"></a>
 </p>
 
