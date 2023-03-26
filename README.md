@@ -22,7 +22,6 @@ composer require xdevor/composer-parser
 ...
 use Xdevor\ComposerParser\Parser;
 ...
-// 1. parse specific installed package by key
 (new Parser())->parse('the/package', 'name'); // return name of the package
 (new Parser())->parse('the/package', 'authors.0.name'); // return the first author name
 (new Parser())->parse('the/package', 'not_exist_key'); // return null if key not exist
