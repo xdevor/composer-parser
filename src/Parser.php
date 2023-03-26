@@ -17,4 +17,9 @@ class Parser
     {
         return $this->parsePackageComposer($packageName, $key, $default);
     }
+
+    public function parseAll(string $key): array
+    {
+        return $this->parseAllByKey($key);
+    }
 }
