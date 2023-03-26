@@ -19,7 +19,7 @@ composer require xdevor/composer-parser
 
 ## Features
 - Supports parsing all installed PHP packages' composer.json files in your project
-- Can eazily extract specific information of nested composer.json files in your project
+- Can easily extract specific information of nested composer.json files in your project
 
 ## Usage
 
