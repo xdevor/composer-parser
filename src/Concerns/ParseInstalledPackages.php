@@ -53,7 +53,7 @@ trait ParseInstalledPackages
     protected function installedPackages(): array
     {
         $packages = [];
-        var_dump($this->installedJsonPath);
+
         if (is_null($this->installedJsonPath)) {
             $installedJsonPath = file_exists(__DIR__ . '/../../vendor/composer/installed.json')
             ? __DIR__ . '/../../vendor/composer/installed.json'
